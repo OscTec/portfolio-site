@@ -1,0 +1,74 @@
+:root {
+  --radius: 20px;
+  --border-width: 5px;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.profile-image {
+  width: 128px;
+  height: 128px;
+  border-radius: var(--border-width);
+  object-fit: cover;
+
+  border: var(--border-width) solid #404040;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 720px;
+  border-color: #404040;
+  border-style: solid;
+
+  padding: 20px;
+}
+
+.project-one {
+  border-width: var(--border-width) var(--border-width) var(--border-width) 0;
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.project-two {
+  border-width: 0 0 var(--border-width) var(--border-width);
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+
+.project-image {
+  width: 256px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .project {
+    flex-direction: row;
+  }
+
+  .project-image {
+    width: 100%;
+  }
+
+  .header {
+    flex-direction: row;
+  }
+}
+
+/* { display: 'flex', justifyContent: 'start', width: '100%', paddingBottom: '20px' } */
