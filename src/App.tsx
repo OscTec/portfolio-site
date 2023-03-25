@@ -1,5 +1,6 @@
 import './App.css';
 import Form from './components/Form';
+import Tab from './components/Tab';
 import viteLogo from '/vite.svg';
 
 type Inputs = {
@@ -16,6 +17,14 @@ function App() {
           <h1 style={{ margin: 0 }}>Hi, I'm Oscar</h1>
           <h2 style={{ margin: 0 }}>A Full Stack TypeScript Developer</h2>
         </div>
+      </div>
+      <div>
+        <p>
+          Description of me - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Itaque quis delectus, magni eum cupiditate porro amet praesentium in?
+          Necessitatibus animi omnis magnam fugiat,
+          vero autem numquam maxime dignissimos ducimus sapiente?
+        </p>
       </div>
       <div className='project project-one'>
         <img src={viteLogo} className="project-image" alt="Vite logo" />
@@ -35,6 +44,7 @@ function App() {
         </p>
         <img src={viteLogo} className="project-image" alt="Vite logo" />
       </div>
+      <Tab />
       <Form />
     </div>
   )

@@ -1,18 +1,19 @@
 :root {
   --radius: 20px;
   --border-width: 5px;
+  --max-width: 1024px;
 }
 
 #root {
-  max-width: 1280px;
+  max-width: var(--max-width);
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
 
 .profile-image {
-  width: 128px;
-  height: 128px;
+  width: 256px;
+  height: 256px;
   border-radius: var(--border-width);
   object-fit: cover;
 
@@ -25,7 +26,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 720px;
+  max-width: var(--max-width);
   border-color: #404040;
   border-style: solid;
 
@@ -43,9 +44,9 @@
 }
 
 .project-image {
-  width: 256px;
-  height: 100%;
-  object-fit: cover;
+  width: 128px;
+  height: 128px;
+  /* object-fit: cover; */
 }
 
 .header {
@@ -58,6 +59,11 @@
 }
 
 @media screen and (min-width: 768px) {
+  .profile-image {
+    width: 128px;
+    height: 128px;
+  }
+
   .project {
     flex-direction: row;
   }
@@ -70,5 +76,3 @@
     flex-direction: row;
   }
 }
-
-/* { display: 'flex', justifyContent: 'start', width: '100%', paddingBottom: '20px' } */
